@@ -1,24 +1,26 @@
-# R for Bioinformatics Assignment
+# Assignment 1: The Clinical Pipeline Challenge
 
-## Overview
-This assignment explores transcriptomic expression data from Normal and Tumor samples using R and tidyverse packages.
+## Section 1: Biomarker Identification
 
-## Tasks Completed
-- Imported raw clinical and expression datasets
-- Cleaned inconsistent metadata and patient IDs
-- Merged datasets for analysis
-- Reshaped data into long format
-- Visualized gene expression patterns
+Gene_C exhibits the anomalous split sub-distribution within the Normal control group.
 
-## Visualization
-A faceted boxplot with jittered sample points was created to compare expression levels of multiple genes between Normal and Tumor groups. 
 
-The visualization highlights differences in expression distributions across biomarkers while also showing individual patient-level variation within each condition group.
+## Section 2: The Biological Paradox
 
-## Tools Used
-- R
-- tidyverse
-- ggplot2
+Most healthy individuals show low Gene_C expression levels. However, a smaller subset of healthy patients displays unusually high Gene_C expression values that overlap with the Tumor group.
+
+The boxplot summarizes the overall distribution, but the jittered individual sample points reveal this hidden subgroup more clearly. This creates a bimodal-like distribution pattern within the Normal cohort.
+
+
+## Section 3: The Biomedical Engineering Design Flaw
+
+Using only the arithmetic mean average for Gene_C would produce a misleading interpretation of the Normal group. The presence of a small subgroup with abnormally high expression values artificially increases the average expression level.
+
+As a result, the mean fails to accurately represent the true distribution of the healthy population.
+
+If a diagnostic threshold were engineered using only this flat average metric, healthy individuals with naturally elevated Gene_C expression could be incorrectly classified as cancer patients. This would generate false positive diagnoses, unnecessary clinical testing, and incorrect medical decisions.
+
+The issue becomes especially dangerous in bimodal distributions where a single average value cannot properly represent distinct biological subgroups.
 - readr
 
 ## Repository Files
