@@ -14,7 +14,7 @@ ggplot(
   ) +
   
   geom_jitter(
-    width = 0.08,
+    width = 0.1,
     alpha = 0.6,
     size = 2
   ) +
