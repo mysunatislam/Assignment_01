@@ -1,4 +1,4 @@
-# Combine datasets
+
 combined_tbl <- inner_join(
   expr_tbl,
   clinic_tbl,
@@ -6,7 +6,6 @@ combined_tbl <- inner_join(
 )
 
 
-# Reshape data
 tidy_tbl <- combined_tbl %>%
   pivot_longer(
     c(Gene_A, Gene_B, Gene_C),
