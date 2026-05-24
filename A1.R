@@ -1,5 +1,5 @@
 # Combine datasets
-combined_tbl <- left_join(
+combined_tbl <- inner_join(
   expr_tbl,
   clinic_tbl,
   by = c("ID" = "Patient_ID")
